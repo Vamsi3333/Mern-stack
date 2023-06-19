@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Forms assignment
+    </title>
+</head>
+<body>
+    <style>
+        table,tr,td{
+            border:1px solid black;
+            margin-left:32%;        
+        }
+        p{
+            text-align: right;
+        }
+        .h{
+            text-align: center;
+            font-weight: bold;
+        }
+        #reg{
+            text-align: center;
+        }
+    </style>
+    <h1 style="color:blue; text-align: center;">Registration form</h1>
+    <form>
+        <table>
+            <tr>
+                <td class="h"><label for="fn">First Name</label></td>
+                <td><input type="text" id="fn"/></td>
+            </tr>
+            <tr>
+                <td class="h"><label for="ln">Last Name</label></td>
+                <td><input type="text" id="ln" /></td>
+            </tr>
+            <tr>
+                <td class="h"><label for="em">Email</label></td>
+                <td><input type="email" id="em"/></td>
+            </tr>
+            <tr>
+                <td class="h" rowspan="2">Gender</td>
+                <td><label>Male<input type="radio"/></label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Female<input type="radio"/></label></td>
+            </tr>
+            <tr>
+                <td class="h">Age</td>
+                <td><input type="number"/></td>
+            </tr>
+            <tr>
+                <td class="h">Phone Number</td>
+                <td><input type="number"/></td>
+            </tr>
+            <tr>
+                <td class="h">Address</td>
+                <td><textarea rows="3" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td class="h">State</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td class="h">Country</td>
+                <td><select name="language">
+                    <option value="indian">Indian</option>
+                    <option value="nepali">Nepali</option>
+                    <option value="others">Others</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="h">Languages Known</td>
+                <td><ul style="list-style-type:none;"> 
+                    <li style="display: inline;"><input type="checkbox"/>English </li>
+                    <li style="display: inline;"><input type="checkbox"/>Kannada </li>
+                    <li style="display: inline;"><input type="checkbox" />Hindi </li>
+                    <li style="display: inline;"><input type="checkbox"/>Telugu </li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" checked="true"/>Hereby I declare all the given details are true</td>
+            </tr>
+            <tr>
+                <td colspan="2"><p>Log in to <a href="https://ethnus.com/">Ethnus</a> website</p></td>
+            </tr>
+        </table>
+            <p id="reg"><input type="submit" value="Register"/></p>
+    </form>
+</body>
