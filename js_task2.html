@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task02</title>
+    <style>
+        body {
+            color: #666666;
+            background: #dddddd;
+            font-weight: 400;
+        }
+
+        h1 {
+            color: #030f27;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        a {
+            color: #666666;
+            transition: .3s;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+            color: #fdbe33;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .table th {
+            font-weight: 700;
+        }
+
+        .table td,
+        .table th {
+            padding: .75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-borderless td,
+        .table-borderless th {
+            border: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out,
+                border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .btn:hover {
+            color: #212529;
+            text-decoration: none;
+        }
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        .btn:active {
+            color: #212529;
+            background-color: #e2e6ea;
+            border-color: #dae0e5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <table class="table table-borderless text-center">
+            <tr>
+                <th>
+                    <h1>Page 01</h1>
+                </th>
+                <th>
+                    <h1>Page 02</h1>
+                </th>
+                <th>
+                    <h1>Page 03</h1>
+                </th>
+            </tr>
+            <tr>
+                <td><a href="page2.html" class="btn">Page 2</a></td>
+                <td><a href="page3.html" class="btn">Page 3</a></td>
+                <td><a href="page2.html" class="btn">Page 2</a></td>
+            </tr>
+            <tr>
+                <td><button onclick="history.forward();" class="btn">Next</button></td>
+                <td><button onclick="history.forward();" class="btn">Next</button></td>
+                <td><button onclick="history.back();" class="btn">Previous</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

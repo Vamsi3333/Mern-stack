@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Task10</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const mapped = arr.map(val => val + 30);
+        console.log("Mapped array:", mapped);
+
+        const fil = arr.filter(e => e % 2 == 0);
+        console.log("Filtered array:", fil);
+
+        const sort = arr.sort((a, b) => a > b ? -1 : 1);
+        console.log("Sorted array:", sort);
+
+        console.log("Array iteration using forEach:");
+        arr.forEach(val => { console.log(val) });
+
+        const arr1 = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        const arr2 = arr.concat(arr1);
+        console.log("Concatenated array:", arr2);
+
+        const every = arr2.every(val => val > 10);
+        console.log("Every function result:", every);
+
+        const some = arr2.some(val => val > 10);
+        console.log("Some function result:", some);
+
+        console.log("Includes function - Does the array include 2?", arr2.includes(2));
+
+        console.log("Joined array:", arr1.join(''));
+
+        console.log("Reduced value of the array:", arr2.reduce((total, curr) => total + curr));
+
+        console.log("Find function - First element greater than 5:", arr2.find(val => val > 5));
+
+        console.log("FindIndex function - Index of first element equal to 5:", arr2.findIndex(val => val == 5));
+
+        console.log("IndexOf function - Index of 5 in the array:", arr2.indexOf(5));
+
+        const arr3 = new Array(10);
+        console.log("Fill function - Array filled with 5:", arr3.fill(5));
+
+        console.log("Slice function - Subarray from index 5 to 8:", arr3.slice(5, 8));
+
+        console.log("Reversed array:", arr2.reverse());
+
+        arr2.push(150);
+        console.log("Push function - Element 150 added to the array:", arr2);
+
+        arr2.pop();
+        console.log("Pop function - Last element removed from the array:", arr2);
+
+        arr2.shift();
+        console.log("Shift function - First element removed from the array:", arr2);
+
+        arr2.unshift(150);
+        console.log("Unshift function - Element 150 added to the beginning of the array:", arr2);
+    </script>
+    <h1 class="text-center">Open the browser console to see the results.</h1>
+</body>
+
+</html>

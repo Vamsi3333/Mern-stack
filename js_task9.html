@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Task09</title>
+  <style>
+    body {
+      height: 100%;
+      background-color: #ff4b69;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      width: 400px;
+      color: #ffffff;
+      font-size: 20px;
+      background-color: #a02d40;
+      padding: 20px;
+    }
+
+    .form-container label {
+      display: inline-block;
+      width: 120px;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+      border: none;
+      padding: 5px;
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      width: 200px;
+    }
+
+    .form-container .gender-label {
+      margin-left: 5px;
+    }
+
+    .form-container button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function validate() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var code = document.getElementById("code").value;
+      var about = document.getElementById("about").value;
+
+      if (name === "" || email === "" || password === "" || code === "" || about === "") {
+        document.getElementById("name").style.border = "2px solid blue";
+        document.getElementById("email").style.border = "2px solid blue";
+        document.getElementById("password").style.border = "2px solid blue";
+        document.getElementById("code").style.border = "2px solid blue";
+        document.getElementById("about").style.border = "2px solid blue";
+        alert("ERROR: All fields are required");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <div class="container">
+    <div class="form-container">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Your name">
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Your email">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="number" name="phoneNumber" id="phoneNumber">
+
+        <label for="gender">Gender:</label>
+        <div class="gender-label">
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+          <input type="radio" name="gender" value="other"> Other
+        </div>
+
+        <label for="language">Language:</label>
+        <select name="language" id="language">
+          <option value="">Select language</option>
+          <option value="English">English</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Hindi">Hindi</option>
+        </select>
+
+        <label for="code">Zip Code:</label>
+        <input type="number" name="code" id="code">
+
+        <label for="about">About:</label>
+        <textarea name="about" id="about" placeholder="Write about yourself..."></textarea>
+
+        <button class="btn btn-light" type="button" onclick="return validate()">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

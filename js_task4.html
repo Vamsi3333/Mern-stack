@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .card {
+            margin: 0 auto;
+            margin-top: 200px;
+            max-width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h1 {
+            font-style: italic;
+            font-weight: lighter;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group-text {
+            background-color: transparent;
+            border: none;
+        }
+
+        .form-control {
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            font-weight: bold;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .form-check-label {
+            margin-right: 15px;
+        }
+
+        .link {
+            text-decoration: none;
+            float: right;
+            color: #007bff;
+        }
+
+        .text-center {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .text-center a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validate() {
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            if (user == "" && pass == "") {
+                document.getElementById("user").style.border = "2px solid red";
+                document.getElementById("pass").style.border = "2px solid red";
+                alert("Enter The Necessary Informations");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="card">
+            <div class="card-header">
+                <h1>Instagram</h1>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="user">
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="pass">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button" onclick="return validate()">Log in</button>
+                </div>
+                <div class="mb-3">
+                    <br>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="box">
+                        <label class="form-check-label" for="box">Remember me</label>
+                        <a href="#" class="link">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 14px;">
+        Don't have an account! <a href="#" style="text-decoration: none;">Sign up here.</a>
+    </div>
+</body>
+
+</html>
