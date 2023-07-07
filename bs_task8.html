@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Task08</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <script>
+    function validate() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var pass = document.getElementById("pass").value;
+      var hobb = document.getElementById("hobb").value;
+      var ct = 0;
+
+      if (name == "") {
+        document.getElementById("name").style.border = "4px solid red";
+        document.getElementById("demo1").innerHTML = "Please enter your name";
+        ct = 1;
+      }
+      if (email == "") {
+        document.getElementById("email").style.border = "4px solid red";
+        document.getElementById("demo2").innerHTML = "Please enter your email";
+        ct = 1;
+      }
+      if (pass == "") {
+        document.getElementById("pass").style.border = "4px solid red";
+        document.getElementById("demo3").innerHTML = "Please enter your password";
+        ct = 1;
+      }
+      if (hobb == "") {
+        document.getElementById("hobb").style.border = "4px solid red";
+        document.getElementById("demo4").innerHTML = "Please enter your hobbies";
+        ct = 1;
+      }
+      if (ct == 1) {
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <div class="container col-5" style="background-color: lightgray;">
+    <form action="">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <div style="color:red;"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <input type="name" class="form-control" id="name">
+        <p id="demo1" style="color:red"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <div style="color:red;"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <input type="email" class="form-control" id="email">
+        <p id="demo2" style="color:red"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <div style="color:red;"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <input type="password" class="form-control" id="pass">
+        <p id="demo3" style="color:red"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Hobbies</label>
+        <div style="color:red;"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <input type="text" class="form-control" id="hobb">
+        <p id="demo4" style="color:red"></p>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-danger" type="button" onclick="return validate()">Submit</button>
+      </div>
+      <br>
+    </form>
+  </div>
+</body>
+
+</html>
